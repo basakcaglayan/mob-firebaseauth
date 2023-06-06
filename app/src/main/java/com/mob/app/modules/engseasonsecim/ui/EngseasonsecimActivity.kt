@@ -11,10 +11,14 @@ import com.mob.app.databinding.ActivityEngseasonsecimBinding
 import com.mob.app.modules.engseasonsecim.`data`.model.EngseasonsecimRowModel
 import com.mob.app.modules.engseasonsecim.`data`.viewmodel.EngseasonsecimVM
 import com.mob.app.modules.fall.ui.FallActivity
+import com.mob.app.modules.ilkbahar.ui.IlkbaharActivity
+import com.mob.app.modules.kis.ui.KisActivity
 import com.mob.app.modules.learning.ui.LearningActivity
+import com.mob.app.modules.sonbahar.ui.SonbaharActivity
 import com.mob.app.modules.spring.ui.SpringActivity
 import com.mob.app.modules.summer.ui.SummerActivity
 import com.mob.app.modules.winter.ui.WinterActivity
+import com.mob.app.modules.yaz.ui.YazActivity
 import kotlin.Int
 import kotlin.String
 import kotlin.Unit
@@ -28,19 +32,6 @@ class EngseasonsecimActivity :
 
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
-    val engseasonsecimAdapter =
-    EngseasonsecimAdapter(viewModel.engseasonsecimList.value?:mutableListOf())
-    //binding.recyclerEngseasonsecim.adapter = engseasonsecimAdapter
-    engseasonsecimAdapter.setOnItemClickListener(
-    object : EngseasonsecimAdapter.OnItemClickListener {
-      override fun onItemClick(view:View, position:Int, item : EngseasonsecimRowModel) {
-        onClickRecyclerEngseasonsecim(view, position, item)
-      }
-    }
-    )
-    viewModel.engseasonsecimList.observe(this) {
-      engseasonsecimAdapter.updateData(it)
-    }
     binding.engseasonsecimVM = viewModel
   }
 
@@ -49,45 +40,25 @@ class EngseasonsecimActivity :
       val destIntent = LearningActivity.getIntent(this, null)
       startActivityForResult(destIntent, REQUEST_CODE_LEARNING_ACTIVITY)
     }
-  }
-
-  fun onClickRecyclerEngseasonsecim(
-    view: View,
-    position: Int,
-    item: EngseasonsecimRowModel
-  ): Unit {
-    when(view.id) {
-      R.id.image48865861 -> {
-        onClickRecyclerEngseasonsecimImage48865861(view, position, item)
-      }
+    binding.spring.setOnClickListener {
+      val destIntent = SpringActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.summer.setOnClickListener {
+      val destIntent = SummerActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.fall.setOnClickListener {
+      val destIntent = FallActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.winter.setOnClickListener {
+      val destIntent = WinterActivity.getIntent(this, null)
+      startActivity(destIntent)
     }
   }
 
-  fun onClickRecyclerEngseasonsecimImage48865861(
-    view: View,
-    position: Int,
-    item: EngseasonsecimRowModel
-  ): Unit {
-    /** TODO As per your logic, Add constant type for item click.*/
-    when(0) {
-      0 -> {
-        val destIntent = WinterActivity.getIntent(this, null)
-        startActivity(destIntent)
-      }
-      1 -> {
-        val destIntent = SummerActivity.getIntent(this, null)
-        startActivity(destIntent)
-      }
-      2 -> {
-        val destIntent = SpringActivity.getIntent(this, null)
-        startActivity(destIntent)
-      }
-      3 -> {
-        val destIntent = FallActivity.getIntent(this, null)
-        startActivity(destIntent)
-      }
-    }
-  }
+
 
   companion object {
     const val TAG: String = "ENGSEASONSECIM_ACTIVITY"

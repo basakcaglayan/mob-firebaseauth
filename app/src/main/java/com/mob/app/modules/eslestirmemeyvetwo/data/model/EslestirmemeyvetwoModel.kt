@@ -19,6 +19,16 @@ data class EslestirmemeyvetwoModel(
   ,  var txtmatchfour: String? =
       MyApp.getInstance().resources.getString(R.string.lbl_4)
   ,
+  var txtmatchbanana: String? =
+      MyApp.getInstance().resources.getString(R.string.lbl_muz)
+  , var txtmatchpineapple: String? =
+      MyApp.getInstance().resources.getString(R.string.lbl_ananas)
+  , var txtmatchpeach: String? =
+      MyApp.getInstance().resources.getString(R.string.lbl_eftal)
+  , var txtmatchgrape: String? =
+      MyApp.getInstance().resources.getString(R.string.lbl_z_m)
+  ,
+
 
   var txtHadieletirel: String? =
       MyApp.getInstance().resources.getString(R.string.msg_hadi_e_le_tirel)

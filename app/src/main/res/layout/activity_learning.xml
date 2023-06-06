@@ -146,7 +146,7 @@
                 android:id="@+id/linearColumnrectangle2031"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_7pxh"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:orientation="vertical" style="@style/groupStylelight_blue_100">
 
                 <LinearLayout

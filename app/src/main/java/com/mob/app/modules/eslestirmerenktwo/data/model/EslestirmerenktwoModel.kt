@@ -20,6 +20,15 @@ data class EslestirmerenktwoModel(
   ,  var txtmatchfour: String? =
       MyApp.getInstance().resources.getString(R.string.lbl_4)
   ,
+  var txtmatchpink: String? =
+      MyApp.getInstance().resources.getString(R.string.lbl_pembe)
+  ,var txtmatchyellow: String? =
+      MyApp.getInstance().resources.getString(R.string.msg_sari)
+  ,var txtmatchorange: String? =
+      MyApp.getInstance().resources.getString(R.string.lbl_turuncu)
+  ,var txtmatchgreen: String? =
+      MyApp.getInstance().resources.getString(R.string.lbl_ye_l)
+  ,
 
   var txtHadieletirel: String? =
       MyApp.getInstance().resources.getString(R.string.msg_hadi_e_le_tirel)

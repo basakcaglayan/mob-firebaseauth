@@ -23,6 +23,16 @@ data class EslestirmehayvanlartwoModel(
   ,  var txtmatchfour: String? =
     MyApp.getInstance().resources.getString(R.string.lbl_4)
   ,
+  var txtmatchlion: String? =
+    MyApp.getInstance().resources.getString(R.string.lbl_aslan)
+  ,var txtmatchsquirral: String? =
+    MyApp.getInstance().resources.getString(R.string.msg_sincap)
+  ,var txtmatchfox: String? =
+    MyApp.getInstance().resources.getString(R.string.msg_tilki)
+  ,
+  var txtmatchoctopus: String? =
+    MyApp.getInstance().resources.getString(R.string.lbl_ahtapot)
+  ,
 
   /**
    * TODO Replace with dynamic value
