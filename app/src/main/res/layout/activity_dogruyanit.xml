@@ -70,8 +70,8 @@
                         android:layout_marginTop="@dimen/_17pxv" android:layout_width="@dimen/_38pxh"/>
                     <ImageView android:gravity="start"
                         android:id="@+id/imageEasterbunnyOne"
-                        android:layout_height="@dimen/_224pxh"
-                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
                         android:scaleType="fitXY"
                         imageRes="@{@drawable/img_easterbunny1}"
                         tools:ignore="ContentDescription" tools:src="@drawable/img_easterbunny1"/>
@@ -79,7 +79,7 @@
                 <TextView android:ellipsize="end"
                     android:id="@+id/txtOne"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_253pxv"
+                    android:layout_marginBottom="@dimen/_1pxv"
                     android:layout_marginStart="@dimen/_19pxh"
                     android:layout_marginTop="@dimen/_33pxv"
                     android:layout_weight="0.18"
