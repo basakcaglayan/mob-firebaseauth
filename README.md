@@ -1,6 +1,8 @@
 
 # mob
 
+MOB is an Android mobile application written in Kotlin. It utilizes Firebase Authentication for login and signup functionalities.
+
 Built with AndroidX Support
 
 Requires Android Studio Arctic Fox | 2020.3.1 or higher.
